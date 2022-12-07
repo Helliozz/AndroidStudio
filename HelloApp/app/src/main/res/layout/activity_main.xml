@@ -11,51 +11,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:id="@+id/enterAmount"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:background="@color/greyFront"
-            android:text="Enter amount"
-            android:layout_gravity="center"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:textSize="20dp" />
+            style="@style/forText"
+            android:text="Enter amount" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="10dp" />
 
         <EditText
-            android:id="@+id/Amount"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:background="@color/greyFront"
-            android:text="Amount"
-            android:layout_gravity="center"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:textSize="20dp"
+            android:id="@+id/amount"
+            style="@style/forText"
             android:ems="10"
-            android:inputType="number" />
+            android:text="0" />
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="10dp"/>
+            android:layout_height="10dp" />
 
         <TextView
             android:id="@+id/cost"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:background="@color/greyFront"
-            android:text="Your bill is..."
-            android:layout_gravity="center"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:textSize="20dp" />
+            style="@style/forText"
+            android:text="Your bill is" />
+
+        <TextView
+            android:id="@+id/totalCost"
+            style="@style/forText"
+            android:text="____________" />
 
     </LinearLayout>
 
@@ -64,43 +51,57 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBaseline_toBottomOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/badService"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.333"
-            android:backgroundTint="#F44336"
-            android:text="Bad service"
-            android:textSize="19dp"
-            android:textColor="@color/white" />
+            <Button
+                android:id="@+id/awesome20"
+                style="@style/forButton"
+                android:backgroundTint="#4CAF50"
+                android:text="Awesome service
+                12% tips" />
 
-        <Button
-            android:id="@+id/normalService"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.33"
-            android:backgroundTint="#FF9800"
-            android:text="Normal service"
-            android:textSize="19dp"
-            android:textColor="@color/white" />
+            <Button
+                android:id="@+id/normal10"
+                style="@style/forButton"
+                android:backgroundTint="#FF9800"
+                android:text="Normal
+                service
+                10% tips" />
 
-        <Button
-            android:id="@+id/awesomeService"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.33"
-            android:backgroundTint="#4CAF50"
-            android:text="Awesome service"
-            android:textSize="19dp"
-            android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/onlyTips0"
+                style="@style/forButton"
+                android:backgroundTint="#E91E63"
+                android:text="Only pay
+                0% tips" />
+
+            <Button
+                android:id="@+id/bad00"
+                style="@style/forButton"
+                android:backgroundTint="#F44336"
+                android:text="Bad
+                service
+                2% tips" />
+
+        </LinearLayout>
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
